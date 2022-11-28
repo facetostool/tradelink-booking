@@ -1,11 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe 'Pages', type: :request do
-  describe 'GET /home' do
+RSpec.describe HealthController, type: :controller do
+  describe 'GET #health' do
     it 'returns http success' do
-      get '/'
+      get :show
       expect(response).to have_http_status(:success)
     end
   end
-
 end

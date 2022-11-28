@@ -21,8 +21,11 @@ gem "jsbundling-rails"
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem "cssbundling-rails"
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+# Build JSON APIs
+gem 'jsonapi-serializer'
+
+# Advisory lock
+gem 'with_advisory_lock'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -48,6 +51,9 @@ gem "bootsnap", require: false
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'timecop'
+  gem 'rails-controller-testing'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
