@@ -81,6 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: tradelink_production
-  username: tradelink
-  password: <%= ENV["TRADELINK_DATABASE_PASSWORD"] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>

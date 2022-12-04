@@ -29,7 +29,7 @@ export const TimeRanges = (props) => {
     }
 
     useEffect(() => {
-        const cable = ActionCable.createConsumer('ws://localhost:3000/cable');
+        const cable = ActionCable.createConsumer(`ws://${window.location.host}/cable`);
         const conn = cable.subscriptions.create(
             { channel: 'TimeRangesChannel' },
             { received: (message) => {
